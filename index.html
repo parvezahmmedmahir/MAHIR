@@ -1,0 +1,1120 @@
+<!doctype html>
+<html lang="en" data-layout="split" data-theme="dark" data-modules="stats,features,showcase,analytics,testimonials,faq,subscribe">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAHIR CHOWDHURY - Premium Digital Platform | Trading Indicators, Software & Web Apps</title>
+    <meta name="description" content="Discover MAHIR CHOWDHURY's premium digital ecosystem featuring cutting-edge trading indicators, web applications, mobile apps, desktop software, and experimental tools. Built for the future of digital innovation.">
+    <meta property="og:title" content="MAHIR CHOWDHURY - Premium Digital Platform | Trading Indicators, Software & Web Apps">
+    <meta property="og:description" content="Discover MAHIR CHOWDHURY's premium digital ecosystem featuring cutting-edge trading indicators, web applications, mobile apps, desktop software, and experimental tools. Built for the future of digital innovation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mahirchowdhury.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MAHIR CHOWDHURY - Premium Digital Platform | Trading Indicators, Software & Web Apps">
+    <meta name="twitter:description" content="Discover MAHIR CHOWDHURY's premium digital ecosystem featuring cutting-edge trading indicators, web applications, mobile apps, desktop software, and experimental tools. Built for the future of digital innovation.">
+    <link rel="canonical" href="https://mahirchowdhury.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066ff',
+                        secondary: '#00d4ff',
+                        accent: '#ff6b35',
+                        dark: '#0a0a0a',
+                        'dark-card': '#1a1a1a'
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+                        'cursor-glow': 'cursorGlow 0.3s ease-out',
+                        'sparkle': 'sparkle 2s ease-in-out infinite',
+                        'shimmer': 'shimmer 2.5s ease-in-out infinite'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(0, 102, 255, 0.5); }
+            to { box-shadow: 0 0 30px rgba(0, 212, 255, 0.8); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 102, 255, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(0, 212, 255, 0.6); }
+        }
+        @keyframes cursorGlow {
+            0% { box-shadow: 0 0 0 rgba(0, 212, 255, 0.4); }
+            100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.8); }
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #0066ff, #00d4ff, #ff6b35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass-card {
+            background: rgba(26, 26, 26, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-border {
+            border: 2px solid transparent;
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.3), rgba(0, 212, 255, 0.3)) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+        }
+        .logo-glow {
+            filter: drop-shadow(0 0 20px rgba(0, 102, 255, 0.5));
+        }
+        .license-key-display {
+            font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+            border: 2px solid #0066ff;
+        }
+        
+        /* Mouse tracking effects */
+        .cursor-tracker {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.6) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease-out;
+        }
+        
+        .interactive-element {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .interactive-element:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.2);
+        }
+        
+        .interactive-element::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .interactive-element:hover::before {
+            left: 100%;
+        }
+        
+        .sparkle-effect {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #00d4ff;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        
+        .professional-logo {
+            background: linear-gradient(135deg, #0066ff, #00d4ff);
+            border-radius: 12px;
+            padding: 8px;
+            box-shadow: 0 8px 32px rgba(0, 102, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .professional-logo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(0, 102, 255, 0.5);
+        }
+        
+        .premium-button {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0066ff, #00d4ff);
+            border: none;
+            border-radius: 12px;
+            padding: 12px 24px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 102, 255, 0.3);
+        }
+        
+        .premium-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 102, 255, 0.5);
+        }
+        
+        .premium-button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s;
+        }
+        
+        .premium-button:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(0, 212, 255, 0.6);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "MAHIR CHOWDHURY Digital Platform",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, Windows, Android, iOS",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Person",
+            "name": "Mahir Chowdhury"
+        },
+        "description": "Premium digital ecosystem featuring trading indicators, web applications, mobile apps, desktop software, and experimental tools."
+    }
+    </script>
+</head>
+<body class="bg-dark text-white overflow-x-hidden">
+    <div class="cursor-tracker"></div>
+    <div class="floating-particles">
+        <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="left: 20%; animation-delay: 1s;"></div>
+        <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
+        <div class="particle" style="left: 40%; animation-delay: 3s;"></div>
+        <div class="particle" style="left: 50%; animation-delay: 4s;"></div>
+        <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+        <div class="particle" style="left: 70%; animation-delay: 6s;"></div>
+        <div class="particle" style="left: 80%; animation-delay: 7s;"></div>
+        <div class="particle" style="left: 90%; animation-delay: 8s;"></div>
+    </div>
+
+    <header class="fixed top-0 w-full z-50 glass-card">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4 interactive-element">
+                    <div class="professional-logo">
+                        <img 
+                            
+                           
+                           
+                            src="https://cdn.ailandingpage.ai/landingpage_io/user_generate/7e326428-a598-47cb-9a0d-40998b5058aa/7e326428-a598-47cb-9a0d-40998b5058aa/professional-logo/9412d8fc4e_0.png"http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23f3f4f6'/%3E%3Ctext x='20' y='20' text-anchor='middle' dy='.3em' font-family='Arial, sans-serif' font-size='14' fill='%236b7280'%3EMC%3C/text%3E%3C/svg%3E"
+                            alt="MAHIR CHOWDHURY Professional Logo" 
+                            class="w-10 h-10 object-cover rounded-lg w-full block"
+                            width="40" height="40" loading="eager" decoding="async" style="aspect-ratio:40/40;"
+                        >
+                    </div>
+                    <span class="text-xl font-bold gradient-text">MAHIR CHOWDHURY</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#platform" class="hover:text-secondary transition-colors interactive-element">Platform</a>
+                    <a href="#products" class="hover:text-secondary transition-colors interactive-element">Products</a>
+                    <a href="#features" class="hover:text-secondary transition-colors interactive-element">Features</a>
+                    <a href="#about" class="hover:text-secondary transition-colors interactive-element">About</a>
+                    <a href="#license" class="hover:text-secondary transition-colors interactive-element">License</a>
+                    <button class="premium-button">
+                        Access Platform
+                    </button>
+                </div>
+                <button class="md:hidden interactive-element" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="min-h-screen flex items-center pt-20 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10"></div>
+            <div class="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-float" style="animation-delay: -3s;"></div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8 animate-slide-up">
+                        <div class="space-y-6">
+                            <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+                                <span class="gradient-text">The Future of</span><br>
+                                <span class="gradient-text">Digital Innovation</span><br>
+                                <span class="text-white">Lives Here</span>
+                            </h1>
+                            <p class="text-2xl text-secondary font-semibold">
+                                Premium Digital Ecosystem by MAHIR CHOWDHURY
+                            </p>
+                            <p class="text-xl text-gray-300 leading-relaxed">
+                                Experience the next generation of digital tools—from cutting-edge trading indicators to revolutionary software solutions, all crafted with precision and built for tomorrow's innovators.
+                            </p>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="premium-button interactive-element">
+                                <i data-lucide="rocket" class="w-5 h-5 inline mr-2"></i>
+                                Explore Platform
+                            </button>
+                            <button class="border-2 border-secondary/50 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-secondary/10 transition-all interactive-element">
+                                <i data-lucide="download" class="w-5 h-5 inline mr-2"></i>
+                                Browse Products
+                            </button>
+                        </div>
+
+                        <div class="flex items-center space-x-8 pt-4">
+                            <div class="text-center interactive-element">
+                                <div class="text-2xl font-bold gradient-text">50+</div>
+                                <div class="text-sm text-gray-400">Digital Products</div>
+                            </div>
+                            <div class="text-center interactive-element">
+                                <div class="text-2xl font-bold gradient-text">10K+</div>
+                                <div class="text-sm text-gray-400">Downloads</div>
+                            </div>
+                            <div class="text-center interactive-element">
+                                <div class="text-2xl font-bold gradient-text">24/7</div>
+                                <div class="text-sm text-gray-400">Innovation</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative interactive-element">
+                        <div class="relative w-full" style="padding-top:56.25%">
+                            <img
+                               
+                               
+                               
+                                src="https://cdn.ailandingpage.ai/landingpage_io/user_generate/7e326428-a598-47cb-9a0d-40998b5058aa/7e326428-a598-47cb-9a0d-40998b5058aa/hero-platform-interface/6047af4f0a_0.png"
+                                alt="MAHIR CHOWDHURY Premium Digital Platform Interface" 
+                                class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-2xl neon-border animate-pulse-glow block rounded-lg"
+                                width="800" height="450" loading="eager" decoding="async"
+                                style="aspect-ratio:800/450;"
+                            >
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 glass-card p-4 rounded-lg">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                                <span class="text-sm">Live Platform</span>
+                            </div>
+                        </div>
+                        <div class="sparkle-effect" style="top: 20%; left: 30%; animation-delay: 0s;"></div>
+                        <div class="sparkle-effect" style="top: 60%; left: 70%; animation-delay: 1s;"></div>
+                        <div class="sparkle-effect" style="top: 80%; left: 20%; animation-delay: 2s;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-gradient-to-b from-transparent to-dark-card/30">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                        About <span class="gradient-text">MAHIR CHOWDHURY</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Meet the visionary behind the premium digital ecosystem revolutionizing the future of technology.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="relative interactive-element">
+                        <div class="relative w-full" style="padding-top:100%">
+                            <img
+                               
+                               
+                               
+                                src="https://cdn.ailandingpage.ai/landingpage_io/user_generate/7e326428-a598-47cb-9a0d-40998b5058aa/7e326428-a598-47cb-9a0d-40998b5058aa/profile-photo/c86d715909_0.png"
+                                alt="MAHIR CHOWDHURY - Digital Innovation Expert" 
+                                class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-2xl neon-border block rounded-lg"
+                                width="500" height="500" loading="lazy" decoding="async"
+                                style="aspect-ratio:500/500;"
+                            >
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 glass-card p-3 rounded-lg">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                                <span class="text-xs">Available</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="glass-card p-8 rounded-xl interactive-element">
+                            <h3 class="text-2xl font-bold mb-4 gradient-text">Digital Innovation Pioneer</h3>
+                            <p class="text-gray-300 leading-relaxed mb-4">
+                                With over a decade of experience in cutting-edge technology development, MAHIR CHOWDHURY has established himself as a visionary leader in the digital innovation space. Specializing in trading indicators, web applications, mobile apps, and desktop software solutions.
+                            </p>
+                            <p class="text-gray-300 leading-relaxed">
+                                Our platform represents the culmination of years of research, development, and refinement in creating premium digital tools that empower creators, traders, and innovators worldwide.
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="glass-card p-6 rounded-xl text-center interactive-element">
+                                <i data-lucide="award" class="w-8 h-8 text-primary mx-auto mb-3"></i>
+                                <h4 class="font-bold mb-2">10+ Years</h4>
+                                <p class="text-sm text-gray-400">Industry Experience</p>
+                            </div>
+                            <div class="glass-card p-6 rounded-xl text-center interactive-element">
+                                <i data-lucide="users" class="w-8 h-8 text-secondary mx-auto mb-3"></i>
+                                <h4 class="font-bold mb-2">50K+</h4>
+                                <p class="text-sm text-gray-400">Global Users</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-xl interactive-element">
+                            <h4 class="text-lg font-bold mb-4 text-secondary">Social Media & Connect</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <a href="#" class="flex items-center space-x-3 p-3 bg-dark-card/50 rounded-lg hover:bg-primary/10 transition-all interactive-element">
+                                    <i data-lucide="mail" class="w-5 h-5 text-primary"></i>
+                                    <span class="text-sm">parvezahmmedmair@gmail.com</span>
+                                </a>
+                                <a href="#" class="flex items-center space-x-3 p-3 bg-dark-card/50 rounded-lg hover:bg-secondary/10 transition-all interactive-element">
+                                    <i data-lucide="send" class="w-5 h-5 text-secondary"></i>
+                                    <span class="text-sm">@LUX_DOT</span>
+                                </a>
+                                <a href="#" class="flex items-center space-x-3 p-3 bg-dark-card/50 rounded-lg hover:bg-accent/10 transition-all interactive-element">
+                                    <i data-lucide="youtube" class="w-5 h-5 text-accent"></i>
+                                    <span class="text-sm">YouTube Channel</span>
+                                </a>
+                                <a href="#" class="flex items-center space-x-3 p-3 bg-dark-card/50 rounded-lg hover:bg-primary/10 transition-all interactive-element">
+                                    <i data-lucide="github" class="w-5 h-5 text-primary"></i>
+                                    <span class="text-sm">GitHub Profile</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="platform" class="py-20 bg-gradient-to-b from-transparent to-dark-card/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                        <span class="gradient-text">AI-Powered</span> Platform Features
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Revolutionary features that automatically enhance your uploads with AI-generated content and professional presentation.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                    <div class="glass-card p-8 rounded-xl hover:shadow-xl hover:shadow-primary/10 transition-all interactive-element">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="image" class="w-8 h-8 text-primary mr-3"></i>
+                            <h3 class="text-xl font-bold">AI Image Generation</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4">Upload any website, web app, or software - our AI automatically detects and generates professional images for your products.</p>
+                        <div class="text-sm text-secondary">✓ Completely Free ✓ Auto-Detection ✓ Professional Quality</div>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-xl hover:shadow-xl hover:shadow-secondary/10 transition-all interactive-element">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="type" class="w-8 h-8 text-secondary mr-3"></i>
+                            <h3 class="text-xl font-bold">Smart Title Generation</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4">AI creates beautiful, professional titles automatically. Transform simple names into compelling, market-ready descriptions.</p>
+                        <div class="text-sm text-accent">✓ Auto-Enhancement ✓ Professional Tone ✓ SEO Optimized</div>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-xl hover:shadow-xl hover:shadow-accent/10 transition-all interactive-element">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="upload" class="w-8 h-8 text-accent mr-3"></i>
+                            <h3 class="text-xl font-bold">Multi-Image Upload</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4">Upload up to 20 images per product. Support for GitHub links, website URLs, and direct file uploads.</p>
+                        <div class="text-sm text-primary">✓ 20 Images Max ✓ URL Support ✓ Batch Processing</div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-12 rounded-2xl interactive-element">
+                    <h3 class="text-3xl font-bold mb-8 text-center gradient-text">Platform Capabilities</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="text-center p-6 bg-dark-card/30 rounded-lg interactive-element">
+                            <i data-lucide="trending-up" class="w-12 h-12 text-primary mx-auto mb-4"></i>
+                            <h4 class="font-bold mb-2">Trading Indicators</h4>
+                            <p class="text-sm text-gray-400">Advanced technical analysis tools</p>
+                        </div>
+                        <div class="text-center p-6 bg-dark-card/30 rounded-lg interactive-element">
+                            <i data-lucide="globe" class="w-12 h-12 text-secondary mx-auto mb-4"></i>
+                            <h4 class="font-bold mb-2">Web Applications</h4>
+                            <p class="text-sm text-gray-400">Modern responsive web apps</p>
+                        </div>
+                        <div class="text-center p-6 bg-dark-card/30 rounded-lg interactive-element">
+                            <i data-lucide="smartphone" class="w-12 h-12 text-accent mx-auto mb-4"></i>
+                            <h4 class="font-bold mb-2">Mobile Apps</h4>
+                            <p class="text-sm text-gray-400">iOS and Android applications</p>
+                        </div>
+                        <div class="text-center p-6 bg-dark-card/30 rounded-lg interactive-element">
+                            <i data-lucide="monitor" class="w-12 h-12 text-primary mx-auto mb-4"></i>
+                            <h4 class="font-bold mb-2">Desktop Software</h4>
+                            <p class="text-sm text-gray-400">Cross-platform desktop tools</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="license" class="py-20 bg-gradient-to-b from-dark-card/30 to-transparent">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                        <span class="gradient-text">License Key</span> Management System
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Advanced license key generation and management system for all your software, web apps, and digital products.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="space-y-6">
+                        <div class="glass-card p-8 rounded-xl interactive-element">
+                            <h3 class="text-2xl font-bold mb-4 gradient-text">Universal License System</h3>
+                            <p class="text-gray-300 leading-relaxed mb-4">
+                                Generate license keys for any software, web application, mobile app, or digital product. Our system provides secure, time-based licensing with flexible duration options.
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center space-x-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                    <span>1 Week to 1 Month Duration</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                    <span>HTML/JavaScript Integration</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                    <span>Auto-Expiration & Renewal</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+                                    <span>Copy-Paste Integration</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-xl interactive-element">
+                            <h4 class="text-lg font-bold mb-4 text-secondary">License Key Generator</h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Product Name</label>
+                                    <input type="text" id="productName" class="w-full p-3 bg-dark-card border border-gray-600 rounded-lg focus:border-primary focus:outline-none interactive-element" placeholder="Enter product name">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">License Duration</label>
+                                    <select id="licenseDuration" class="w-full p-3 bg-dark-card border border-gray-600 rounded-lg focus:border-primary focus:outline-none interactive-element">
+                                        <option value="7">1 Week</option>
+                                        <option value="14">2 Weeks</option>
+                                        <option value="30">1 Month</option>
+                                    </select>
+                                </div>
+                                <button onclick="generateLicenseKey()" class="w-full premium-button">
+                                    <i data-lucide="key" class="w-5 h-5 inline mr-2"></i>
+                                    Generate License Key
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="glass-card p-8 rounded-xl interactive-element">
+                            <h4 class="text-lg font-bold mb-4 text-accent">Generated License Key</h4>
+                            <div class="license-key-display p-4 rounded-lg text-center">
+                                <div id="licenseKeyDisplay" class="text-lg font-mono text-primary">
+                                    XXXX-XXXX-XXXX-XXXX
+                                </div>
+                                <div id="licenseExpiry" class="text-sm text-gray-400 mt-2">
+                                    Expires: Not Generated
+                                </div>
+                            </div>
+                            <div class="flex gap-3 mt-4">
+                                <button onclick="copyLicenseKey()" class="flex-1 bg-dark-card border border-primary px-4 py-2 rounded-lg hover:bg-primary/10 transition-all interactive-element">
+                                    <i data-lucide="copy" class="w-4 h-4 inline mr-2"></i>
+                                    Copy Key
+                                </button>
+                                <button onclick="downloadLicenseHTML()" class="flex-1 bg-dark-card border border-secondary px-4 py-2 rounded-lg hover:bg-secondary/10 transition-all interactive-element">
+                                    <i data-lucide="download" class="w-4 h-4 inline mr-2"></i>
+                                    Download HTML
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-xl interactive-element">
+                            <h4 class="text-lg font-bold mb-4 text-primary">Integration Code</h4>
+                            <div class="bg-dark-card/50 p-4 rounded-lg">
+                                <pre class="text-sm text-gray-300 overflow-x-auto"><code id="integrationCode">&lt;script&gt;
+// License validation code
+const licenseKey = "GENERATED_KEY_HERE";
+const expiryDate = new Date("EXPIRY_DATE_HERE");
+
+if (new Date() > expiryDate) {
+    alert("License expired! Please renew.");
+    window.location.href = "https://mahirchowdhury.com";
+}
+&lt;/script&gt;</code></pre>
+                            </div>
+                            <button onclick="copyIntegrationCode()" class="w-full mt-3 bg-accent/20 border border-accent px-4 py-2 rounded-lg hover:bg-accent/30 transition-all interactive-element">
+                                <i data-lucide="code" class="w-4 h-4 inline mr-2"></i>
+                                Copy Integration Code
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-xl interactive-element">
+                    <h3 class="text-2xl font-bold mb-6 text-center gradient-text">How It Works</h3>
+                    <div class="grid md:grid-cols-4 gap-6">
+                        <div class="text-center interactive-element">
+                            <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="plus" class="w-8 h-8 text-primary"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">1. Generate Key</h4>
+                            <p class="text-sm text-gray-400">Create a new license key with custom duration</p>
+                        </div>
+                        <div class="text-center interactive-element">
+                            <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="code" class="w-8 h-8 text-secondary"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">2. Integrate Code</h4>
+                            <p class="text-sm text-gray-400">Paste the HTML/JS code into your application</p>
+                        </div>
+                        <div class="text-center interactive-element">
+                            <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="clock" class="w-8 h-8 text-accent"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">3. Auto-Expire</h4>
+                            <p class="text-sm text-gray-400">License automatically expires after set duration</p>
+                        </div>
+                        <div class="text-center interactive-element">
+                            <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="refresh-cw" class="w-8 h-8 text-primary"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">4. Renew</h4>
+                            <p class="text-sm text-gray-400">Users return to generate new license keys</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                        Digital <span class="gradient-text">Product</span> Showcase
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Explore our comprehensive range of premium digital solutions with AI-generated visuals and professional presentations.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="glass-card p-8 rounded-xl hover:shadow-xl hover:shadow-primary/10 transition-all group interactive-element">
+                        <div class="relative w-full mb-6" style="padding-top:56.25%">
+                            <img
+                               
+                               
+                               
+                                src="https://cdn.ailandingpage.ai/landingpage_io/user_generate/7e326428-a598-47cb-9a0d-40998b5058aa/7e326428-a598-47cb-9a0d-40998b5058aa/trading-indicators/9ace2d388a_0.png"
+                                alt="Advanced Trading Indicators" 
+                                class="absolute inset-0 w-full h-full object-cover rounded-lg block"
+                                width="400" height="225" loading="lazy" decoding="async"
+                                style="aspect-ratio:400/225;"
+                            >
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="trending-up" class="w-8 h-8 text-primary mr-3"></i>
+                            <h3 class="text-xl font-bold">Trading Indicators</h3>
+                        </div>
+                        <p class="text-gray-300 mb-6">Advanced technical analysis tools with precision algorithms for crypto and forex markets.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-secondary font-semibold">25+ Tools</span>
+                            <button class="text-primary hover:text-secondary transition-colors">
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-700">
+                            <div class="flex items-center space-x-2 text-sm text-gray-400">
+                                <i data-lucide="youtube" class="w-4 h-4"></i>
+                                <span>Tutorial Available</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-xl hover:shadow-xl hover:shadow-secondary/10 transition-all group interactive-element">
+                        <div class="relative w-full mb-6" style="padding-top:56.25%">
+                            <img
+                               
+                               
+                               
+                                src="https://cdn.ailandingpage.ai/landingpage_io/user_generate/7e326428-a598-47cb-9a0d-40998b5058aa/7e326428-a598-47cb-9a0d-40998b5058aa/web-apps/d5eb4214e7_0.png"
+                                alt="Modern Web Applications" 
+                                class="absolute inset-0 w-full h-full object-cover rounded-lg block"
+                                width="400" height="225" loading="lazy" decoding="async"
+                                style="aspect-ratio:400/225;"
+                            >
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="globe" class="w-8 h-8 text-secondary mr-3"></i>
+                            <h3 class="text-xl font-bold">Web Applications</h3>
+                        </div>
+                        <p class="text-gray-300 mb-6">Responsive web apps with cutting-edge frameworks and intuitive user experiences.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-accent font-semibold">15+ Apps</span>
+                            <button class="text-secondary hover:text-primary transition-colors">
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-700">
+                            <div class="flex items-center space-x-2 text-sm text-gray-400">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                <span>GitHub Integration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-xl hover:shadow-xl hover:shadow-accent/10 transition-all group interactive-element">
+                        <div class="relative w-full mb-6" style="padding-top:56.25%">
+                            <img
+                               
+                               
+                               
+                                src="https://cdn.ailandingpage.ai/landingpage_io/user_generate/7e326428-a598-47cb-9a0d-40998b5058aa/7e326428-a598-47cb-9a0d-40998b5058aa/mobile-apps/4dad102f26_0.png"
+                                alt="Premium Mobile Applications" 
+                                class="absolute inset-0 w-full h-full object-cover rounded-lg block"
+                                width="400" height="225" loading="lazy" decoding="async"
+                                style="aspect-ratio:400/225;"
+                            >
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="smartphone" class="w-8 h-8 text-accent mr-3"></i>
+                            <h3 class="text-xl font-bold">Mobile Apps</h3>
+                        </div>
+                        <p class="text-gray-300 mb-6">Native iOS and Android applications with premium design and performance optimization.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-primary font-semibold">10+ Apps</span>
+                            <button class="text-accent hover:text-secondary transition-colors">
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-700">
+                            <div class="flex items-center space-x-2 text-sm text-gray-400">
+                                <i data-lucide="play" class="w-4 h-4"></i>
+                                <span>Demo Videos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-xl hover:shadow-xl hover:shadow-primary/10 transition-all group interactive-element">
+                        <div class="relative w-full mb-6" style="padding-top:56.25%">
+                            <img
+                               
+                               
+                               
+                                src="https://cdn.ailandingpage.ai/landingpage_io/user_generate/7e326428-a598-47cb-9a0d-40998b5058aa/7e326428-a598-47cb-9a0d-40998b5058aa/desktop-software/4abc983164_0.png"
+                                alt="Professional Desktop Software" 
+                                class="absolute inset-0 w-full h-full object-cover rounded-lg block"
+                                width="400" height="225" loading="lazy" decoding="async"
+                                style="aspect-ratio:400/225;"
+                            >
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="monitor" class="w-8 h-8 text-primary mr-3"></i>
+                            <h3 class="text-xl font-bold">Desktop Software</h3>
+                        </div>
+                        <p class="text-gray-300 mb-6">Powerful desktop applications for Windows and Mac with advanced functionality.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-secondary font-semibold">8+ Tools</span>
+                            <button class="text-primary hover:text-accent transition-colors">
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-700">
+                            <div class="flex items-center space-x-2 text-sm text-gray-400">
+                                <i data-lucide="download" class="w-4 h-4"></i>
+                                <span>Direct Download</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="py-20 bg-gradient-to-b from-transparent to-dark-card/30">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                        Platform <span class="gradient-text">Features</span> & Capabilities
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Advanced features designed for creators, developers, and digital innovators seeking premium solutions.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+                    <div class="space-y-8">
+                        <div class="glass-card p-8 rounded-xl interactive-element">
+                            <div class="flex items-center mb-4">
+                                <i data-lucide="shield-check" class="w-8 h-8 text-primary mr-3"></i>
+                                <h3 class="text-2xl font-bold">Secure Download System</h3>
+                            </div>
+                            <p class="text-gray-300 leading-relaxed">
+                                Advanced security with tokenized download links, expiring URLs, and comprehensive anti-abuse protection ensuring safe and controlled access to all digital products.
+                            </p>
+                        </div>
+
+                        <div class="glass-card p-8 rounded-xl interactive-element">
+                            <div class="flex items-center mb-4">
+                                <i data-lucide="bar-chart-3" class="w-8 h-8 text-secondary mr-3"></i>
+                                <h3 class="text-2xl font-bold">Real-time Analytics</h3>
+                            </div>
+                            <p class="text-gray-300 leading-relaxed">
+                                Comprehensive download tracking, user engagement metrics, and live analytics dashboard providing detailed insights into product performance and user behavior.
+                            </p>
+                        </div>
+
+                        <div class="glass-card p-8 rounded-xl interactive-element">
+                            <div class="flex items-center mb-4">
+                                <i data-lucide="git-branch" class="w-8 h-8 text-accent mr-3"></i>
+                                <h3 class="text-2xl font-bold">Version Management</h3>
+                            </div>
+                            <p class="text-gray-300 leading-relaxed">
+                                Sophisticated version control with automated releases, detailed changelogs, and seamless update management for all software products and applications.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative interactive-element">
+                        <div class="relative w-full" style="padding-top:75%">
+                            <img
+                               
+                               
+                               
+                                src="https://cdn.ailandingpage.ai/landingpage_io/user_generate/7e326428-a598-47cb-9a0d-40998b5058aa/7e326428-a598-47cb-9a0d-40998b5058aa/platform-features/382ad49ae3_0.png"
+                                alt="Advanced Platform Features Dashboard" 
+                                class="absolute inset-0 w-full h-full object-cover rounded-xl shadow-2xl block rounded-lg"
+                                width="600" height="450" loading="lazy" decoding="async"
+                                style="aspect-ratio:600/450;"
+                            >
+                        </div>
+                        <div class="absolute top-4 right-4 glass-card p-3 rounded-lg">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                                <span class="text-xs">Live Data</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="glass-card p-6 rounded-xl text-center interactive-element">
+                        <i data-lucide="credit-card" class="w-12 h-12 text-primary mx-auto mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Flexible Monetization</h3>
+                        <p class="text-gray-300">PayPal, Stripe, crypto payments, and local payment integration for global accessibility.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl text-center interactive-element">
+                        <i data-lucide="users" class="w-12 h-12 text-secondary mx-auto mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">User Management</h3>
+                        <p class="text-gray-300">Advanced user roles, authentication systems, and comprehensive access control.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl text-center interactive-element">
+                        <i data-lucide="zap" class="w-12 h-12 text-accent mx-auto mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">High Performance</h3>
+                        <p class="text-gray-300">Optimized for speed, scalability, and reliability with enterprise-grade infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="glass-card p-12 rounded-2xl text-center interactive-element">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                        Ready to <span class="gradient-text">Experience</span> the Future?
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                        Join the premium digital ecosystem and access cutting-edge tools, innovative software, and experimental technologies designed for tomorrow's creators.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="premium-button">
+                            <i data-lucide="rocket" class="w-5 h-5 inline mr-2"></i>
+                            Launch Platform
+                        </button>
+                        <button class="border-2 border-secondary/50 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-secondary/10 transition-all interactive-element">
+                            <i data-lucide="download" class="w-5 h-5 inline mr-2"></i>
+                            Download Now
+                        </button>
+                        <button class="border-2 border-accent/50 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-accent/10 transition-all interactive-element">
+                            <i data-lucide="play" class="w-5 h-5 inline mr-2"></i>
+                            View Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-white/10">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="professional-logo">
+                            <img
+                                
+                               
+                               
+                                src="https://cdn.ailandingpage.ai/landingpage_io/user_generate/7e326428-a598-47cb-9a0d-40998b5058aa/7e326428-a598-47cb-9a0d-40998b5058aa/footer-logo/1a2d73fdb6_0.png"http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23f3f4f6'/%3E%3Ctext x='20' y='20' text-anchor='middle' dy='.3em' font-family='Arial, sans-serif' font-size='14' fill='%236b7280'%3EMC%3C/text%3E%3C/svg%3E"
+                                alt="MAHIR CHOWDHURY Logo" 
+                                class="w-10 h-10 object-cover rounded-lg w-full block"
+                                width="40" height="40" loading="lazy" decoding="async" style="aspect-ratio:40/40;"
+                            >
+                        </div>
+                        <span class="text-xl font-bold gradient-text">MAHIR CHOWDHURY</span>
+                    </div>
+                    <p class="text-gray-400">Premium Digital Ecosystem for Innovation & Excellence</p>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Products</h3>
+                    <div class="space-y-2 text-gray-400">
+                        <div class="interactive-element cursor-pointer hover:text-secondary">Trading Indicators</div>
+                        <div class="interactive-element cursor-pointer hover:text-secondary">Web Applications</div>
+                        <div class="interactive-element cursor-pointer hover:text-secondary">Mobile Apps</div>
+                        <div class="interactive-element cursor-pointer hover:text-secondary">Desktop Software</div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Platform</h3>
+                    <div class="space-y-2 text-gray-400">
+                        <div class="interactive-element cursor-pointer hover:text-secondary">Secure Downloads</div>
+                        <div class="interactive-element cursor-pointer hover:text-secondary">Analytics Dashboard</div>
+                        <div class="interactive-element cursor-pointer hover:text-secondary">Version Control</div>
+                        <div class="interactive-element cursor-pointer hover:text-secondary">License Management</div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Connect</h3>
+                    <div class="space-y-2 text-gray-400">
+                        <div class="interactive-element cursor-pointer hover:text-secondary">parvezahmmedmair@gmail.com</div>
+                        <div class="interactive-element cursor-pointer hover:text-secondary">@LUX_DOT (Telegram)</div>
+                        <div class="interactive-element cursor-pointer hover:text-secondary">Premium Support</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 MAHIR CHOWDHURY. All rights reserved. Building the future of digital innovation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mouse tracking functionality
+        const cursor = document.querySelector('.cursor-tracker');
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateCursor() {
+            cursorX += (mouseX - cursorX) * 0.1;
+            cursorY += (mouseY - cursorY) * 0.1;
+            cursor.style.left = cursorX + 'px';
+            cursor.style.top = cursorY + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // Interactive elements hover effects
+        document.querySelectorAll('.interactive-element').forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(2)';
+                cursor.style.background = 'radial-gradient(circle, rgba(0, 212, 255, 0.8) 0%, transparent 70%)';
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursor.style.background = 'radial-gradient(circle, rgba(0, 212, 255, 0.6) 0%, transparent 70%)';
+            });
+        });
+
+        // Sparkle effects on hover
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mouseenter', (e) => {
+                createSparkles(e.currentTarget);
+            });
+        });
+
+        function createSparkles(element) {
+            for (let i = 0; i < 3; i++) {
+                setTimeout(() => {
+                    const sparkle = document.createElement('div');
+                    sparkle.className = 'sparkle-effect';
+                    sparkle.style.left = Math.random() * 100 + '%';
+                    sparkle.style.top = Math.random() * 100 + '%';
+                    element.style.position = 'relative';
+                    element.appendChild(sparkle);
+                    
+                    setTimeout(() => {
+                        sparkle.remove();
+                    }, 2000);
+                }, i * 200);
+            }
+        }
+
+        function toggleMobileMenu() {
+            console.log('Mobile menu toggled');
+        }
+
+        function generateLicenseKey() {
+            const productName = document.getElementById('productName').value || 'Product';
+            const duration = parseInt(document.getElementById('licenseDuration').value);
+            
+            // Generate random license key
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let licenseKey = '';
+            for (let i = 0; i < 16; i++) {
+                if (i > 0 && i % 4 === 0) licenseKey += '-';
+                licenseKey += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            
+            // Calculate expiry date
+            const expiryDate = new Date();
+            expiryDate.setDate(expiryDate.getDate() + duration);
+            
+            // Update display
+            document.getElementById('licenseKeyDisplay').textContent = licenseKey;
+            document.getElementById('licenseExpiry').textContent = `Expires: ${expiryDate.toLocaleDateString()}`;
+            
+            // Update integration code
+            const integrationCode = `<script>
+// License validation for ${productName}
+const licenseKey = "${licenseKey}";
+const expiryDate = new Date("${expiryDate.toISOString()}");
+
+if (new Date() > expiryDate) {
+    alert("License expired! Please renew at https://mahirchowdhury.com");
+    window.location.href = "https://mahirchowdhury.com";
+} else {
+    console.log("License valid until: " + expiryDate.toLocaleDateString());
+}
+<\/script>`;
+            
+            document.getElementById('integrationCode').textContent = integrationCode;
+        }
+
+        function copyLicenseKey() {
+            const licenseKey = document.getElementById('licenseKeyDisplay').textContent;
+            navigator.clipboard.writeText(licenseKey).then(() => {
+                alert('License key copied to clipboard!');
+            });
+        }
+
+        function copyIntegrationCode() {
+            const code = document.getElementById('integrationCode').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Integration code copied to clipboard!');
+            });
+        }
+
+        function downloadLicenseHTML() {
+            const licenseKey = document.getElementById('licenseKeyDisplay').textContent;
+            const code = document.getElementById('integrationCode').textContent;
+            
+            const htmlContent = `<!DOCTYPE html>
+<html>
+<head>
+    <title>License Validation</title>
+</head>
+<body>
+    <h1>License Key: ${licenseKey}</h1>
+    ${code}
+</body>
+</html>`;
+            
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `license-${licenseKey}.html`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        lucide.createIcons();
+    </script>
+</body>
+</html>
